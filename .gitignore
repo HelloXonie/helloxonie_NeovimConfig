@@ -1,0 +1,15 @@
+# Ignore Neovim AppImage binary
+nvim.appimage
+
+# Neovim swap/backup/undo files (if any end up here)
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.undo
+
+# optional: node modules or pycache if there are JS?Python plugins
+node_modules/
+__pycache__/
+
