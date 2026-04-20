@@ -30,7 +30,7 @@ local plugins={
 --local vim-options={}
 
 --require("vim-options")
-require("lazy").setup("plugins")
+require("lazy").setup(plugins)
 
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
