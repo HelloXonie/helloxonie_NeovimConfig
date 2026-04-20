@@ -46,11 +46,5 @@ config.setup({
 require("catppuccin").setup()
 vim.cmd.colorscheme ("catppuccin")
 
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = {"c", "cpp"},
-	callback = function()
-		local lspconfig = require("lspconfig")
-		lspconfig.clangd.setup({})
-	end,
-})
+vim.lsp.config('clangd', {})
+vim.lsp.enable('clangd')
