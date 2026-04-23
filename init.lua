@@ -46,5 +46,9 @@ config.setup({
 require("catppuccin").setup()
 vim.cmd.colorscheme ("catppuccin")
 
+vim.opt.clipboard = "unnamedplus"
+
 vim.lsp.config('clangd', {})
 vim.lsp.enable('clangd')
+
+
