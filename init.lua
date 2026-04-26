@@ -19,30 +19,10 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons",
-    },
-    lazy = false,
-  },
-  { "neovim/nvim-lspconfig" },
-}
-
 --local vim-options={}
 
 --require("vim-options")
-require("lazy").setup(plugins)
+require("lazy").setup("plugins")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
